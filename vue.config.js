@@ -7,12 +7,13 @@ function resolve(dir) {
   return path.join(__dirname, "./", dir)
 }
 
-const publicPath = process.env.NODE_ENV === "production" ? "/huohua/" : "/"
+const publicPath = process.env.NODE_ENV === "production" ? "/pc-huohua/" : "/"
 
 module.exports = {
   // 部署时的基本URL
   publicPath,
-  outputDir: "dist",
+  outputDir: "docs",
+  assetsDir: "pc-huohua",
   // 打包时去除source map
   productionSourceMap: false,
   configureWebpack: {
