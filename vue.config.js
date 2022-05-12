@@ -1,13 +1,13 @@
-const path = require("path");
+const path = require("path")
 
 // 依赖分析插件
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 function resolve(dir) {
-  return path.join(__dirname, "./", dir);
+  return path.join(__dirname, "./", dir)
 }
 
-const publicPath = process.env.NODE_ENV === "production" ? "/huohua/" : "/";
+const publicPath = process.env.NODE_ENV === "production" ? "/huohua/" : "/"
 
 module.exports = {
   // 部署时的基本URL
@@ -39,7 +39,7 @@ module.exports = {
     //   }
     // }
   },
-  chainWebpack: (config) => {
+  chainWebpack: config => {
     // 配置：https://github.com/neutrinojs/webpack-chain
     // 配置svg图标的加载器
     // config.module
@@ -74,4 +74,4 @@ module.exports = {
   //   historyApiFallback: true,
   //   proxy: require('./vue.proxy.config')
   // }
-};
+}
