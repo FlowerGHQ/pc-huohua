@@ -13,7 +13,7 @@ module.exports = {
   // 部署时的基本URL
   publicPath,
   outputDir: "docs",
-  assetsDir: "pc-huohua",
+  // assetsDir: "pc-huohua",
   // 打包时去除source map
   productionSourceMap: false,
   configureWebpack: {
