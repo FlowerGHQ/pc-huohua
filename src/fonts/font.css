@@ -1,0 +1,12 @@
+@font-face {  
+    font-family: 'Poppins-Regular';  /*重命名字体名 */
+    src: url('./Poppins-Regular.ttf'); /*引入字体*/
+    font-weight: normal;  
+    font-style: normal;  
+}
+@font-face {  
+    font-family: 'simple-font';  /*重命名字体名 */
+    src: url('./simple-font.ttf'); /*引入字体*/
+    font-weight: normal;  
+    font-style: normal;  
+}
