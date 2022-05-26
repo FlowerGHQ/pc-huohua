@@ -11,13 +11,15 @@ import HelloWorld from '@/components/HelloWorld.vue'
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
+    HelloWorld
   },
+  methods() {}
 }
 </script>
 <style scoped lang="stylus">
-.home
-  width 100%
-  height 100vh
-  background-color #fce54f
+.home {
+    width: 100%;
+    height: 100vh;
+    background-color: #fce54f;
+}
 </style>

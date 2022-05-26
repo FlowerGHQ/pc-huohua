@@ -1,5 +1,9 @@
 {
-    "tabWidth": 2,
-    "semi": false,
-    "singleQuote": true
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "eslintIntegration": false,
+  "tslintIntegration": false,
+  "disableLanguages": ["vue"]
 }

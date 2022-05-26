@@ -6,76 +6,235 @@
           <img src="@/assets/YFDRDGSMC.png" alt="" />
         </div>
       </el-header>
-      <el-main>Main</el-main>
+      <el-main class="main-content">
+        <div
+          style="
+            --swiper-navigation-color: #fff;
+            --swiper-pagination-color: #fff;
+          "
+          class="swiper mySwiper"
+        >
+          <div class="swiper-wrapper">
+            <div class="parallax-bg" data-swiper-parallax="-23%"></div>
+            <div class="swiper-slide swiper-one">
+              <div class="title" data-swiper-parallax="-300">Slide 1</div>
+              <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+              <div class="text" data-swiper-parallax="-100">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam dictum mattis velit, sit amet faucibus felis iaculis
+                  nec. Nulla laoreet justo vitae porttitor porttitor.
+                  Suspendisse in sem justo. Integer laoreet magna nec elit
+                  suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at
+                  elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula
+                  nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean
+                  feugiat non eros quis feugiat.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-two">
+              <div class="title" data-swiper-parallax="-300">Slide 2</div>
+              <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+              <div class="text" data-swiper-parallax="-100">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam dictum mattis velit, sit amet faucibus felis iaculis
+                  nec. Nulla laoreet justo vitae porttitor porttitor.
+                  Suspendisse in sem justo. Integer laoreet magna nec elit
+                  suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at
+                  elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula
+                  nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean
+                  feugiat non eros quis feugiat.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-three">
+              <div class="title" data-swiper-parallax="-300">Slide 3</div>
+              <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+              <div class="text" data-swiper-parallax="-100">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam dictum mattis velit, sit amet faucibus felis iaculis
+                  nec. Nulla laoreet justo vitae porttitor porttitor.
+                  Suspendisse in sem justo. Integer laoreet magna nec elit
+                  suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at
+                  elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula
+                  nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean
+                  feugiat non eros quis feugiat.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- 左右箭头 -->
+          <!-- <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div> -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </el-main>
     </el-container>
-    <!-- <span class="demonstration">默认</span> -->
-    <!-- <el-slider v-model="10"></el-slider> -->
-    <!-- <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul> -->
+    <div class="phone" id="relation" @mousedown="move">电话联系</div>
   </div>
 </template>
 
 <script>
+// import Swiper JS
+import Swiper from 'swiper'
+// import Swiper styles
+import 'swiper/css/swiper.min.css'
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String,
+    msg: String
   },
-  // components: {
-  //   Button,
-  // },
+  data() {
+    return {
+      swiperInstance: null
+      // relationDrag: nul
+    }
+  },
+  components: {},
+  methods: {
+    move(e) {
+      const odiv = document.getElementById('relation')
+      // 算出鼠标相对元素的位置
+      odiv.onmousedown = (e) => {
+        document.onmousemove = (e) => {
+          const disX = e.clientX - odiv.offsetLeft
+          const disY = e.clientY - odiv.offsetTop
+          odiv.style.left = disX + 'px'
+          odiv.style.top = disY + 'px'
+        }
+      }
+
+      document.onmouseup = (e) => {
+        // 鼠标松开后不再移动
+        document.onmousemove = null
+      }
+    }
+  },
+
+  mounted() {
+    // eslint-disable-next-line no-new
+    this.swiperInstance = new Swiper('.mySwiper', {
+      speed: 600,
+      parallax: true,
+      loop: true,
+      autoplay: true,
+      // direction: 'vertical',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true,
+        dynamicMainBullets: 2
+      }
+      // navigation: {
+      //   nextEl: '.swiper-button-next',
+      //   prevEl: '.swiper-button-prev'
+      // }
+    })
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus">
-.font-i
-  font-family: 'simple-font'
-  font-weight: 700
-.el-header
- background-color #f9d749 !important
-.hello
- width 100%
- height 100%
- background-color #fce54f
-h3
-  margin 40px 0 0
+.el-header {
+    padding: 0 !important;
+}
 
-ul
-  list-style-type none
-  padding 0
+.el-main {
+    height: calc(100% -80px);
+    padding: 0 !important;
+}
 
-li
-  display inline-block
-  margin 0 10px
+.swiper {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow: hindden;
+}
 
-a
-  color #42b983
+.swiper-slide {
+    font-size: 18px;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    // width: 100%;
+    // height: 50%;
+    // -webkit-background-size: cover;
+    // background-size: cover;
+    // background-position: center;
+}
+
+.swiper-slide .title {
+    font-size: 41px;
+    font-weight: 300;
+}
+
+.swiper-slide .subtitle {
+    font-size: 21px;
+}
+
+.swiper-slide .text {
+    font-size: 14px;
+    max-width: 400px;
+    line-height: 1.3;
+}
+
+.main-content {
+    position: relative;
+}
+
+.font-i {
+    font-family: 'simple-font';
+    font-weight: 700;
+}
+
+.el-header .left {
+    background-color: #f9d749 !important;
+}
+
+.hello {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fce54f;
+}
+
+.phone {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.swiper-one {
+    background: url('~@/assets/super-1.jpg') no-repeat;
+    background-size: cover;
+}
+
+.swiper-two {
+    background: url('~@/assets/super-2.jpg') no-repeat;
+    background-size: cover;
+}
+
+.swiper-three {
+    background: url('~@/assets/super-3.jpg') no-repeat;
+    background-size: cover;
+}
 </style>

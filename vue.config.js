@@ -1,46 +1,46 @@
-const path = require("path")
+const path = require('path')
 
 // 依赖分析插件
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 function resolve(dir) {
-  return path.join(__dirname, "./", dir)
+  return path.join(__dirname, './', dir)
 }
 
-const publicPath = process.env.NODE_ENV === "production" ? "/pc-huohua/" : "/"
+const publicPath = process.env.NODE_ENV === 'production' ? '/pc-huohua/' : '/'
 
 module.exports = {
   // 部署时的基本URL
   publicPath,
-  outputDir: "docs",
+  outputDir: 'docs',
   // assetsDir: "pc-huohua",
   // 打包时去除source map
   productionSourceMap: false,
   configureWebpack: {
     resolve: {
       alias: {
-        "@": resolve("src"),
-      },
+        '@': resolve('src')
+      }
     },
     amd: {
-      toUrlUndefined: true,
+      toUrlUndefined: true
     },
     plugins: [
       // webpack打包依赖分析
       // , new BundleAnalyzerPlugin()
-    ],
+    ]
   },
   css: {
     // loaderOptions: {
     //   stylus: {
     //     import: [
-    //       path.join(__dirname, './packages/pkg_base/assets/css/_theme.styl'),
+    //       path.join(__dirname, './assets/css/_theme.styl'),
     //       path.join(__dirname, './packages/pkg_base/assets/css/_mixin.styl')
     //     ]
     //   }
     // }
   },
-  chainWebpack: config => {
+  chainWebpack: (config) => {
     // 配置：https://github.com/neutrinojs/webpack-chain
     // 配置svg图标的加载器
     // config.module
@@ -68,7 +68,7 @@ module.exports = {
     //   .use('file-loader')
     //   .loader('file-loader')
     //   .end()
-  },
+  }
   // // 接口反向代理
   // devServer: {
   //   // 设置代理
