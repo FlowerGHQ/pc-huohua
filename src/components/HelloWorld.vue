@@ -139,7 +139,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus">
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     .el-header .left {
         position: relative;
         font-size: 16px;
@@ -168,7 +168,7 @@ export default {
     }
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 450px) {
     .footer {
         width: 100%;
         height: 100px;
