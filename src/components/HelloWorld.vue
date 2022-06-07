@@ -3,7 +3,8 @@
     <el-container class="container-all">
       <el-header height="80px">
         <div class="left">
-          <img src="@/assets/YFDRDGSMC.png" alt="" />
+          <span class="hidden-huohua">浙江省李英电火花</span>
+          <img src="@/assets/YFDRDGSMC.png" alt="" class="hidden-img" />
         </div>
       </el-header>
       <el-main class="main-content">
@@ -141,6 +142,9 @@ export default {
 @media screen and (max-width: 400px) {
     .el-header .left {
         position: relative;
+        font-size: 16px;
+        height: 2.4rem;
+        line-height: 2.4rem;
         background-color: #f9d749 !important;
 
         img {
@@ -149,6 +153,33 @@ export default {
             top: 0;
             transform: scale(0.5);
         }
+
+        .hidden-img {
+            display: none;
+        }
+    }
+
+    .footer {
+        width: 100%;
+        height: 60vh;
+        line-height: 200px;
+        font-size: 16px;
+        background-color: #fff;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .footer {
+        width: 100%;
+        line-height: 50px;
+        text-align: left;
+        box-sizing: border-box;
+        padding-left: 20px;
+        background-color: #fff;
+    }
+
+    .hidden-huohua {
+        display: none;
     }
 }
 
@@ -169,7 +200,7 @@ export default {
     width: 100%;
     height: 100%;
     background: #000;
-    overflow: hindden;
+    overflow: hidden !important;
 }
 
 .swiper-slide {
@@ -250,15 +281,5 @@ export default {
 .swiper-three {
     background: url('~@/assets/super-3.jpg') no-repeat;
     background-size: cover;
-}
-
-.footer {
-    width: 100%;
-    height: 100px;
-    line-height: 50px;
-    text-align: left;
-    box-sizing: border-box;
-    padding-left: 20px;
-    background-color: #fff;
 }
 </style>

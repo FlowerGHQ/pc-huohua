@@ -12,8 +12,7 @@ export default {
   name: 'Home',
   components: {
     HelloWorld
-  },
-  methods() {}
+  }
 }
 </script>
 <style scoped lang="stylus">
