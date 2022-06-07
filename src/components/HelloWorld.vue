@@ -171,6 +171,7 @@ export default {
 @media screen and (min-width: 400px) {
     .footer {
         width: 100%;
+        height: 100px;
         line-height: 50px;
         text-align: left;
         box-sizing: border-box;
