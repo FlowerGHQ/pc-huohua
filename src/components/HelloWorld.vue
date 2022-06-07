@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <el-container>
+    <el-container class="container-all">
       <el-header height="80px">
         <div class="left">
           <img src="@/assets/YFDRDGSMC.png" alt="" />
@@ -72,7 +72,7 @@
         </div>
       </el-main>
     </el-container>
-    <div class="phone" id="relation" @mousedown="move">电话联系</div>
+    <div class="footer">电话联系： 李英 13588235630</div>
   </div>
 </template>
 
@@ -138,6 +138,24 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus">
+@media screen and (max-width: 400px) {
+    .el-header .left {
+        position: relative;
+        background-color: #f9d749 !important;
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: scale(0.5);
+        }
+    }
+}
+
+.el-header .left {
+    background-color: #f9d749 !important;
+}
+
 .el-header {
     padding: 0 !important;
 }
@@ -198,10 +216,6 @@ export default {
     font-weight: 700;
 }
 
-.el-header .left {
-    background-color: #f9d749 !important;
-}
-
 .hello {
     position: relative;
     width: 100%;
@@ -236,5 +250,15 @@ export default {
 .swiper-three {
     background: url('~@/assets/super-3.jpg') no-repeat;
     background-size: cover;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    line-height: 50px;
+    text-align: left;
+    box-sizing: border-box;
+    padding-left: 20px;
+    background-color: #fff;
 }
 </style>
