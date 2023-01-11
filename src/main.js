@@ -19,6 +19,7 @@ Vue.config.productionTip = false
 // }).$mount('#app')
 let router = null;
 let instance = null;
+// 提交一次
 
 function render(props = {}) {
   const { container } = props;
