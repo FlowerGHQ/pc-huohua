@@ -19,10 +19,6 @@ Vue.config.productionTip = false
 // }).$mount('#app')
 let router = null;
 let instance = null;
-// 提交一次
-// 提交两次
-// 提交三次
-// 提交四次
 
 function render(props = {}) {
   const { container } = props;
