@@ -21,6 +21,7 @@ let router = null;
 let instance = null;
 // 提交一次
 // 提交两次
+// 提交三次
 
 function render(props = {}) {
   const { container } = props;
