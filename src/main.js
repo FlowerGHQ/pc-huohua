@@ -20,6 +20,7 @@ Vue.config.productionTip = false
 let router = null;
 let instance = null;
 // 提交一次
+// 提交两次
 
 function render(props = {}) {
   const { container } = props;
