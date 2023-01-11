@@ -12,10 +12,15 @@ const publicPath = process.env.NODE_ENV === 'production' ? '/pc-huohua/' : '/'
 module.exports = {
   // 部署时的基本URL
   publicPath,
-  outputDir: 'docs',
+  // outputDir: 'docs',
   // assetsDir: "pc-huohua",
   // 打包时去除source map
   productionSourceMap: false,
+  devServer: {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+  },
   configureWebpack: {
     resolve: {
       alias: {
